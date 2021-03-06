@@ -42,7 +42,7 @@ ext {
 
             gsonVersion = "2.8.4", // gosn
             multidexVersion = "1.0.3", // multidex
-            utilcodeVersion = "1.23.7", // utilcode
+            utilcodeVersion = "1.29.0", // utilcode
             mmkvVersion = "1.0.17", // mmkv
             epoxyVersion = "3.8.0", // epoxy
             mvrxVersion = "1.1.0" // mvrx
