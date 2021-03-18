@@ -28,18 +28,10 @@ class GlobeConfigModule private constructor(builder: Builder) {
     private lateinit var mInterceptors: List<Interceptor>
     private lateinit var mCacheFile: File
     val globeConfigModule = Kodein.Module(KODEIN_MODULE_GLOBECINFIG_TAG) {
-
-        bind<HttpUrl>() with singleton {
-            mApiUrl
-        }
-
+        bind<HttpUrl>() with singleton { mApiUrl }
         bind<List<Interceptor>>() with singleton { mInterceptors }
-
         bind<GlobeHttpHandler>() with singleton { mHandler }
-
-        bind<File>(KODEIN_TAG_FILE_CACHEDIR) with singleton {
-            mCacheFile
-        }
+        bind<File>(KODEIN_TAG_FILE_CACHEDIR) with singleton { mCacheFile }
     }
 
     init {
@@ -90,7 +82,6 @@ class GlobeConfigModule private constructor(builder: Builder) {
             this.interceptors.add(interceptor)
             return this
         }
-
 
         fun cacheFile(cacheFile: File): Builder {
             this.cacheFile = cacheFile

@@ -19,10 +19,7 @@ const val KODEIN_MODULE_IMAGELOADER_TAG = "kodein_module_imageloader_tag"
 
 val imageLoaderModule = Kodein.Module(KODEIN_MODULE_IMAGELOADER_TAG) {
 
-  bind<BaseImageLoaderStrategy>() with singleton {
-    GlideImageLoaderStrategy()
-  }
-
-  bind<ImageLoader>() with singleton { ImageLoader(instance()) }
+    bind<BaseImageLoaderStrategy>() with singleton { GlideImageLoaderStrategy() }
+    bind<ImageLoader>() with singleton { ImageLoader(instance()) }
 
 }

@@ -70,6 +70,7 @@ open class BaseApplication : Application(), KodeinAware {
         INSTANCE = this
         //MMKV初始化
         MMKV.initialize(this)
+        Utils.init(this)
         if (isMainProcess()) {
             registerActivityLifecycleCallbacks(ActivityLifecycle(appManager))
             injectConfigModule(configModules)
